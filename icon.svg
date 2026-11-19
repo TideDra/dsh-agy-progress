@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="agyProgBg" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="agyProgPrism" x1="14" y1="14" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="55%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#agyProgBg)" stroke="#312E81" stroke-width="2"/>
+  <path d="M24 17L36 41H28.2L24 32.6L19.8 41H12L24 17Z" stroke="url(#agyProgPrism)" stroke-width="3.2" stroke-linejoin="round"/>
+  <rect x="33" y="16" width="19" height="14" rx="5" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+  <circle cx="38.5" cy="23" r="1.5" fill="#38BDF8"/>
+  <circle cx="42.5" cy="23" r="1.5" fill="#818CF8"/>
+  <circle cx="46.5" cy="23" r="1.5" fill="#34D399"/>
+  <path d="M36 30L33.5 34L39.5 30" fill="#1E293B" stroke="#38BDF8" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16 48H48" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 48H36" stroke="url(#agyProgPrism)" stroke-width="3" stroke-linecap="round"/>
+</svg>

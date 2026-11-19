@@ -1,0 +1,77 @@
+{
+  "name": "@local/dsh-agy-progress",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Proactive mid-task progress commentary nudger exclusively for Antigravity (agy) mode in DeepSeek Harness.",
+  "license": "MIT",
+  "author": "TideDra",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TideDra/dsh-agy-progress.git"
+  },
+  "homepage": "https://github.com/TideDra/dsh-agy-progress#readme",
+  "bugs": {
+    "url": "https://github.com/TideDra/dsh-agy-progress/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "antigravity",
+    "agy",
+    "gemini",
+    "progress-updates",
+    "coding-agent"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "src/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/agy-progress.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-session-controller"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-brand": "*",
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/schemastery": "*",
+    "zod": "*"
+  }
+}

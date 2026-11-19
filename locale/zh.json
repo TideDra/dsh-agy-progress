@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Antigravity 进展播报增强",
+    "description": "专为 Antigravity (agy) 模式打造：在连续多步静默工具调用时通过原生 <SYSTEM_MESSAGE> 轻推 Gemini 边干活边汇报简短进展，零打断工具链、零破坏思考签名缓存。"
+  }
+}

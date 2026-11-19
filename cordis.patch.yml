@@ -1,0 +1,21 @@
+# Bundle patch for @local/dsh-agy-progress:
+# Mounts the Antigravity-exclusive progress commentary nudger calibrated on 60 Codex + 30 Agy trajectories:
+# - Stage 1 (Opening): >= 2 silent tool steps AND >= 10s elapsed (skips quick <10s Q&A; median 1st update ~14s)
+# - Stage 2 (Mid-task): >= 65s elapsed (@ >= 2 silent steps), or >= 10 silent steps (@ >= 45s elapsed)
+# - Cooldown: >= 4 steps AND >= 30s if a prior nudge went unanswered
+- insert:
+    - id: agy-progress
+      name: '@local/dsh-agy-progress'
+      config:
+        defaultEnabled: true
+        targetPreset: 'agy'
+        modelPattern: 'gemini'
+        firstUpdateStepThreshold: 2
+        firstUpdateMinSeconds: 10
+        silentElapsedSeconds: 65
+        minSilentStepsForTimeNudge: 2
+        silentStepThreshold: 10
+        stepMinElapsedSeconds: 45
+        cooldownSteps: 4
+        cooldownSeconds: 30
+        followUserLanguage: true
